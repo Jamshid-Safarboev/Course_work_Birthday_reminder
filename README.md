@@ -8,6 +8,9 @@ The program can be run by executing the Python script. To add a birthday, call t
 
 Once the program is running, users can interact with it via a command-line interface. They can add birthdays for different individuals, remove existing birthdays, view all reminders, and receive notifications for birthdays occurring on the current day.
 
+2. Body/Analysis.
+The provided program is a well-structured example of object-oriented programming (OOP) in Python. It demonstrates the four pillars of OOP: Polymorphism, Abstraction, Inheritance, and Encapsulation.
+
 Polymorphism: This is when a subclass provides a different implementation of a method that is already provided by its parent class. In our code, the send_notification and print_reminders methods in the Reminder class are overridden in the BirthdayReminder class. Also, the EmailNotificationDecoratorclass overrides the send_notification method.
 class Reminder(ABC):  # Abstract base class
     @abstractmethod
@@ -76,12 +79,12 @@ class CSVHandler:  # Encapsulates CSV handling
     def import_from_csv(filename):  # Public method
         ...
 
-Results:
+3. Results:
 •	The program successfully implements the four pillars of object-oriented programming: Polymorphism, Abstraction, Inheritance, and Encapsulation.
 •	The BirthdayReminder class effectively manages birthday reminders and sends notifications, demonstrating the practical application of these OOP concepts.
 •	The CSVHandler class provides a way to persistently store and retrieve data, which is a crucial aspect of many real-world applications.
 •	One challenge faced during implementation was ensuring that the EmailNotificationDecorator class correctly extends the functionality of the Reminder class without modifying its original behavior.
-Conclusion:
+4. Conclusion:
 •	This work has achieved a solid understanding and application of the four pillars of object-oriented programming. It has resulted in a program that can manage birthday reminders, send notifications, and handle CSV file operations.
 •	The result of this program is a flexible and extendable system for managing reminders. It can be easily extended to handle different types of reminders and notifications.
 •	Future prospects of this program include extending it to handle different types of reminders (e.g., meetings, anniversaries), integrating it with an email server to send actual email notifications, and adding a user interface for a more user-friendly experience.
