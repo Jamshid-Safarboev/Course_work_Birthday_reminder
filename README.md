@@ -8,11 +8,7 @@ The program can be run by executing the Python script. To add a birthday, call t
 
 Once the program is running, users can interact with it via a command-line interface. They can add birthdays for different individuals, remove existing birthdays, view all reminders, and receive notifications for birthdays occurring on the current day.
 
-Polymorphism:
-
-
-
-Polymorphism: This is when a subclass provides a different implementation of a method that is already provided by its parent class. In your code, the send_notification and print_reminders methods in the Reminder class are overridden in the BirthdayReminder class. Also, the EmailNotificationDecoratorclass overrides the send_notification method.
+Polymorphism: This is when a subclass provides a different implementation of a method that is already provided by its parent class. In our code, the send_notification and print_reminders methods in the Reminder class are overridden in the BirthdayReminder class. Also, the EmailNotificationDecoratorclass overrides the send_notification method.
 class Reminder(ABC):  # Abstract base class
     @abstractmethod
     def send_notification(self):  # Abstract method
@@ -33,7 +29,7 @@ class EmailNotificationDecorator(Reminder):  # Inherits from Reminder
     def send_notification(self):  # Overridden method
         ...
 
-Abstraction: This is when a class provides an interface for its subclasses but does not provide a complete implementation. In your code, the Reminder class is an abstract base class (ABC) that provides an interface for its subclasses. It defines two abstract methods: send_notification and print_reminders.
+Abstraction: This is when a class provides an interface for its subclasses but does not provide a complete implementation. In our code, the Reminder class is an abstract base class (ABC) that provides an interface for its subclasses. It defines two abstract methods: send_notification and print_reminders.
 class Reminder(ABC):  # Abstract base class
     @abstractmethod
     def send_notification(self):  # Abstract method
@@ -43,7 +39,7 @@ class Reminder(ABC):  # Abstract base class
     def print_reminders(self):  # Abstract method
         pass
 
-Inheritance: This is when a class inherits properties and methods from another class. In your code, the BirthdayReminder and EmailNotificationDecorator classes inherit from the Reminder class.
+Inheritance: This is when a class inherits properties and methods from another class. In our code, the BirthdayReminder and EmailNotificationDecorator classes inherit from the Reminder class.
 class Reminder(ABC):  # Abstract base class
     ...
 
@@ -53,7 +49,7 @@ class BirthdayReminder(Reminder):  # Inherits from Reminder
 class EmailNotificationDecorator(Reminder):  # Inherits from Reminder
     ...
 
-Encapsulation: This is when a class hides its internal details and exposes only what is necessary. In your code, the BirthdayReminder class encapsulates the details of how birthdays are stored and managed. It provides methods to add and remove birthdays, and to send notifications and print reminders. The CSVHandler class encapsulates the details of how CSV files are handled.
+Encapsulation: This is when a class hides its internal details and exposes only what is necessary. In our code, the BirthdayReminder class encapsulates the details of how birthdays are stored and managed. It provides methods to add and remove birthdays, and to send notifications and print reminders. The CSVHandler class encapsulates the details of how CSV files are handled.
 class BirthdayReminder(Reminder):  # Inherits from Reminder
     def __init__(self, user):  # Constructor method
         self.user = user  # Private attribute
