@@ -10,7 +10,7 @@ Original file is located at
 import csv  # I imported the CSV module for handling CSV files
 from abc import ABC, abstractmethod  # it is importing ABC (Abstract Base Class) and abstractmethod for defining abstract classes and methods
 import datetime  # We are importing the datetime module for working with dates and times
-
+#Polymorphism: This is when a subclass provides a different implementation of a method that is already provided by its parent class. In your code, the send_notification and print_reminders methods in the Reminder class are overridden in the BirthdayReminder class. Also, the EmailNotificationDecoratorclass overrides the send_notification method
 class Reminder(ABC):  # Defining an abstract base class Reminder
     @abstractmethod  # it is a decorator to define an abstract method
     def send_notification(self):  # Abstract method to send notifications
@@ -29,7 +29,7 @@ class BirthdayReminder(Reminder):  # Define a concrete class BirthdayReminder th
         self.birthdays[name] = date  # Add the provided name and date to the birthdays dictionary
 
     def remove_birthday(self, name):  # Method to remove a birthday from the reminders
-        if name in self.birthdays:  # WE can check if the name exists in the birthdays dictionary
+        if name in self.birthdays:  # We can check if the name exists in the birthdays dictionary
             del self.birthdays[name]  # If yes, delete the birthday associated with the name
 
     def print_reminders(self):  # Method to print all reminders
@@ -53,7 +53,7 @@ class ReminderFactory:  # Define a class to create reminder objects
         else:  # If the reminder type is not recognized
             raise ValueError("Invalid reminder type")  # Raise a ValueError indicating an invalid reminder type
 
-class CSVHandler:  #We are defining a class to handle CSV file operations
+class CSVHandler:  # We are defining a class to handle CSV file operations
     @staticmethod  # Shows decorator to define a static method
     def export_to_csv(filename, data):  # Static method to export data to a CSV file
         with open(filename, 'w', newline='') as file:  # Open the file in write mode, 'w' means write
@@ -118,7 +118,7 @@ class BirthdayReminder(Reminder):  # Define a concrete class BirthdayReminder th
         self.birthdays[name] = date  # Add the provided name and date to the birthdays dictionary
 
     def remove_birthday(self, name):  # Method to remove a birthday from the reminders
-        if name in self.birthdays:  # WE can check if the name exists in the birthdays dictionary
+        if name in self.birthdays:  # We can check if the name exists in the birthdays dictionary
             del self.birthdays[name]  # If yes, delete the birthday associated with the name
 
     def print_reminders(self):  # Method to print all reminders
@@ -142,7 +142,7 @@ class ReminderFactory:  # Define a class to create reminder objects
         else:  # If the reminder type is not recognized
             raise ValueError("Invalid reminder type")  # Raise a ValueError indicating an invalid reminder type
 
-class CSVHandler:  #We are defining a class to handle CSV file operations
+class CSVHandler:  # we are defining a class to handle CSV file operations
     @staticmethod  # Shows decorator to define a static method
     def export_to_csv(filename, data):  # Static method to export data to a CSV file
         with open(filename, 'w', newline='') as file:  # Open the file in write mode, 'w' means write
@@ -222,3 +222,4 @@ suite = unittest.TestLoader().loadTestsFromTestCase(TestBirthdayReminder)
 
 # We create a TextTestRunner object and use it to run the test suite.
 unittest.TextTestRunner().run(suite)
+
