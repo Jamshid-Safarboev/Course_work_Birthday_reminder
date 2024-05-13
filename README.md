@@ -79,7 +79,7 @@ class CSVHandler:  # Encapsulates CSV handling
     def import_from_csv(filename):  # Public method
         ...
 Unittesing:
-Sure, let's go through the unit tests you've written for your Birthday Reminder program:
+Birthday Reminder program:
 
 1. **test_add_birthday**: This test checks the functionality of the `add_birthday` method. It adds a birthday to the reminder and then asserts that the birthday was added correctly.
 
