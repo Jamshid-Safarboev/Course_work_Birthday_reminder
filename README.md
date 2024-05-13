@@ -90,7 +90,7 @@ Birthday Reminder program:
 4. **test_send_notification**: This test checks the functionality of the `send_notification` method. It adds a birthday for today, captures the output of the `send_notification` method, and then asserts that the output matches the expected output.
 
 In conclusion, these unit tests ensure that the main functionalities of your Birthday Reminder program work as expected. They test the methods for adding and removing birthdays, printing reminders, and sending notifications.
-Result of Unittes: 
+Result of Unittest: 
 Ran 4 tests in 0.000s
 OK
 
