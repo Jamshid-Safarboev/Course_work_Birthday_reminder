@@ -78,6 +78,18 @@ class CSVHandler:  # Encapsulates CSV handling
     @staticmethod
     def import_from_csv(filename):  # Public method
         ...
+Unittesing:
+Sure, let's go through the unit tests you've written for your Birthday Reminder program:
+
+1. **test_add_birthday**: This test checks the functionality of the `add_birthday` method. It adds a birthday to the reminder and then asserts that the birthday was added correctly.
+
+2. **test_remove_birthday**: This test checks the functionality of the `remove_birthday` method. It first adds a birthday, then removes it, and finally asserts that the birthday was removed correctly.
+
+3. **test_print_reminders**: This test checks the functionality of the `print_reminders` method. It adds a birthday, captures the output of the `print_reminders` method, and then asserts that the output matches the expected output.
+
+4. **test_send_notification**: This test checks the functionality of the `send_notification` method. It adds a birthday for today, captures the output of the `send_notification` method, and then asserts that the output matches the expected output.
+
+In conclusion, these unit tests ensure that the main functionalities of your Birthday Reminder program work as expected. They test the methods for adding and removing birthdays, printing reminders, and sending notifications.
 
 3. Results:
 •	The program successfully implements the four pillars of object-oriented programming: Polymorphism, Abstraction, Inheritance, and Encapsulation.
